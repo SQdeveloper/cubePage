@@ -1,0 +1,450 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
+
+body {
+    margin: 0;
+}
+
+.container {
+    /* background-color: yellow; */
+    display:flex; 
+    flex-direction: column;
+}
+
+:root {
+    --color-red: #F31C1C;
+}
+
+.home {
+    height: 100vh;
+    width: 100%;
+    background-image: url("../images/fondo-cubo.png");
+    background-size: 100% 100%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home__logo {
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.home__logo-img {
+    margin: 0;
+    width: 3rem;
+}
+
+.home__logo-title {
+    margin: 0;
+    width: 7rem;
+    word-break: break-all;
+    color: #2BA8EE;
+}
+
+.home__text-title {
+    color: #1090da;
+    text-align: center;
+    font-size: 3rem;
+    margin: 0;
+}
+
+.home__text-description {
+    width: 39rem;
+    text-align: center;
+}
+
+.home__groupMarcas {
+    position: absolute;
+    width: 100%;
+    bottom: 1rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+.home__groupMarcas-img {
+    width: 11rem;
+}
+
+.tiposCubos{
+    width: 100%;
+}
+
+.title {
+    position: relative;
+    padding-left: 19.5rem;
+    display: flex;
+    align-items: center;
+    font-size: 3rem;
+}
+
+.title-icon {
+    padding-top: .6rem;
+    padding-left: .5rem;
+    width: 35px;
+    filter: invert(14%) sepia(92%) saturate(4426%) hue-rotate(355deg) brightness(118%) contrast(90%);
+}
+
+.title::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: .3rem;
+    left: 0;
+    height: 3.5rem;
+    background-color: white;
+    border-left: 18rem solid var(--color-red);
+    border-right: .7rem solid var(--color-red); 
+}
+
+.tiposCubos__contCards {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+    width: 85%;
+    margin: 7rem auto;
+}
+
+.tiposCubos__contCards-card {
+    width: 18rem;
+    height: 18rem;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tiposCubos__contCards-card-1 {
+    background-color: #2BA8EE;
+}
+.tiposCubos__contCards-card-2 {
+    background-color: orange;
+}
+.tiposCubos__contCards-card-3 {
+    background-color: #EE2BCF;
+}
+.tiposCubos__contCards-card-4 {
+    background-color: #2BEECB;
+}
+.tiposCubos__contCards-card-5 {
+    background-color: #2BEE32;
+}
+.tiposCubos__contCards-card-6 {
+    background-color: #3A2BEE;
+}
+
+.tiposCubos__card__content {
+    position: relative;
+    top: -4rem;
+}
+
+.tiposCubos__card-img {
+    width: 15rem;
+    height: 15rem;
+}
+
+.tiposCubos__card-title {
+    color: white;
+}
+
+.tiposCubos__card-subtitle {
+    color: #F6DCDC;
+}
+
+.vector {
+    width: 100%;
+    height: 35rem;
+    background-repeat: no-repeat;
+    background-image: url("../images/Vector.png");
+    background-size: 100%;
+    position: relative;
+}
+
+.vector__text {
+    width: 15rem;
+    font-size: 3.5rem;
+    color: white;
+    margin: 4rem 0 0 6rem;
+}
+
+.vector__text-green {
+    color: #2BEE32;
+}
+
+.vector__img-gan {
+    position: absolute;
+    top: 10rem;
+    width: 22rem;
+    right: 10rem;
+}
+
+.masVendidos__swiper {/*Contenedor total del slider*/
+    width: 85%;
+    margin: 5rem 0;
+}
+
+.masVendidos__slide {/*Slide-content*/
+    margin: 0 5rem;
+    overflow: hidden;
+}
+
+.masVendidos__slide .slide__img {
+    transition: transform .5s;
+    transform: scale(.7);
+}
+
+.slide__img.swiper-slide.swiper-slide-next {/*Siguiente img a mostrar en el slider(imagen del centro)*/
+    transform: scale(1);
+}
+
+.stationCube {
+    position: relative;
+}
+
+.contentPhone {
+    position: absolute;
+    right: 10rem;
+    top: 24rem;
+    width: 584px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contentPhone__text {
+    width: 80%;
+    text-align: center;
+    position: absolute;
+    color: white;
+    font-size: 1.3rem;
+}
+
+
+@keyframes float {
+    from {
+        transform: translateY(0rem);      
+    }
+    
+    to {
+        transform: translateY(2rem);
+    }
+}
+
+.stationCube__bubbles {
+    position: absolute;
+    border-radius: 50%;
+    animation: float 1.5s infinite alternate;        
+    color: white;
+    /* text-align: center; */
+}
+
+.stationCube__bubbles:hover::before {
+    left: -100%;
+}
+
+.stationCube__bubbles:hover > .bubble__text {
+    left: -50%;
+}
+
+.bubble__text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    transition: left .6s;
+    text-align: center;
+    font-size: 1.2rem;
+    font-family: 'DM Serif Display', serif;
+}
+
+.stationCube__bubble1 {
+    width: 12rem;
+    height: 12rem;
+    right: 3rem;
+}
+
+.stationCube__bubble1-img {
+    width: inherit;
+    height: inherit;
+    border-radius: 50%;
+}
+
+.stationCube__bubble1::before {
+    content: "";
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    left: 0;
+    background-color: rgba(240, 91, 22, 0.842);
+    border-radius: 50%;
+    transition: left .6s;
+}
+
+.stationCube__bubble2 {
+    width: 18rem;
+    height: 18rem;
+    left: 6rem;
+    top: 18rem;
+    animation-delay: .5s;
+}
+
+.stationCube__bubble2-img {
+    width: inherit;
+    height: inherit;
+    /*inexplicablemente esta img es redondea por si solo, no lo entiendo*/
+}
+
+.stationCube__bubble2::before {
+    content: "";
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    left: 0;
+    background-color: rgba(0, 0, 255, .6);
+    border-radius: 50%;
+    transition: left .6s;
+}
+
+.stationCube__bubble3 {
+    width: 12rem;
+    height: 12rem;
+    top: 44rem;
+    left: 12rem;
+    animation-delay: .8s;
+}
+
+.stationCube__bubble3-img {
+    width: inherit;
+    height: inherit;
+    border-radius: 50%;
+}
+
+.stationCube__bubble3::before {
+    content: "";
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    left: 0;
+    background-color: rgba(211, 11, 27, 0.8);
+    border-radius: 50%;
+    transition: left .6s;
+}
+
+.stationCube__bubble4 {
+    width: 16rem;
+    height: 16rem;
+    top: 48rem;
+    left: 36rem;
+    animation-delay: 1.2s;
+}
+
+.stationCube__bubble4-img {
+    width: inherit;
+    height: inherit;
+    border-radius: 50%;
+}
+
+.stationCube__bubble4::before {
+    content: "";
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    left: 0;
+    background-color: rgba(188, 11, 211, 0.8);
+    border-radius: 50%;
+    transition: left .6s;
+}
+
+.stationCube__bubble5 {
+    width: 14rem;
+    height: 14rem;
+    top: 45rem;
+    right: 8rem;
+    animation-delay: .2s;
+}
+
+.stationCube__bubble5-img {
+    width: inherit;
+    height: inherit;
+    border-radius: 50%;
+}
+
+.stationCube__bubble5::before {
+    content: "";
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    left: 0;
+    background-color: rgba(22, 216, 241, 0.8);
+    border-radius: 50%;
+    transition: left .6s;
+}
+
+.datosInteresantes {
+    position: relative;
+    background-image: url("../images/VectorMorado.png");
+    width: 100%;
+    background-repeat: no-repeat;
+    height: 55rem;
+    top: 62rem;
+    text-align: center;
+    color: white;
+}
+
+.datosInteresantes__title {
+    margin: 7rem 0 1.5rem 0;
+    font-size: 3rem;
+}
+
+.datosInteresantes__text {
+    width: 70%;
+    margin: auto;
+    margin-bottom: 4rem;
+}
+
+.datosInteresantes__contCards {
+    display: flex;
+    width: 80%;
+    margin: auto;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.contCards__card {
+    width: 20rem;
+    height: 24rem;
+    background-color: white;
+    border-radius: 15px;
+    margin-bottom: 8rem;
+}
+
+.card__img {
+    margin: 1.5rem;
+    width: 10rem;
+}
+
+.card__text {
+    color: black;
+    width: 80%;
+    margin: auto;
+    font-weight: bold;
+}
+
+.preguntasFrecuentes {
+    position: relative;
+    top: 60rem;
+    text-align: center;
+}
+
+.preguntasFrecuentes__title {
+    color: #A41CF8;
+    font-size: 3rem;
+}
