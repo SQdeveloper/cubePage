@@ -80,6 +80,12 @@ body {
     display: flex;
     align-items: center;
     font-size: 3rem;
+    transform: translateX(-100%);
+    transition: transform 2s;
+}
+
+.title-active {
+    transform: none;
 }
 
 .title-icon {
@@ -146,6 +152,27 @@ body {
 .tiposCubos__card-img {
     width: 15rem;
     height: 15rem;
+    transform: translateY(-12rem);
+    opacity: 0;
+    transition: all 1s;
+}
+
+.tiposCubos__card-img-active {
+    opacity: 1;
+    transform: none;
+}
+
+.tiposCubos__card-img-2 {
+    transition-delay: .2s;
+}
+.tiposCubos__card-img-3 {
+    transition-delay: .4s;
+}
+.tiposCubos__card-img-5 {
+    transition-delay: .2s;
+}
+.tiposCubos__card-img-6 {
+    transition-delay: .4s;
 }
 
 .tiposCubos__card-title {
@@ -172,6 +199,24 @@ body {
     margin: 4rem 0 0 6rem;
 }
 
+@keyframes bounce {
+    0% {
+        transform: translateY(1.5rem);
+    }
+    25% {
+        transform: translateY(-1.5rem);
+    }
+    50% {
+        transform: translateY(1rem);
+    }
+    75% {
+        transform: translateY(-1rem);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
 .vector__text-green {
     color: #2BEE32;
 }
@@ -181,6 +226,14 @@ body {
     top: 10rem;
     width: 22rem;
     right: 10rem;
+    opacity: .3;
+    transition: all 1.5s;
+    transform: translateY(14rem);
+}
+
+.vector__img-gan-active {
+    opacity: 1;
+    transform: none;
 }
 
 .masVendidos__swiper {/*Contenedor total del slider*/
@@ -440,6 +493,7 @@ body {
     position: relative;
     top: 60rem;
     text-align: center;
+    overflow: hidden;
 }
 
 .preguntasFrecuentes__title {
@@ -458,6 +512,24 @@ body {
     border-radius: 5px; 
     margin-bottom: 4rem;
     box-shadow: 13px 13px 4px 0px rgba(0, 0, 0, 0.25);
+    transition: transform 2s;
+}
+
+.group__question-1 {
+    transform: translateX(100%);
+}
+.group__question-2 {
+    transform: translateX(-100%);
+}
+.group__question-3 {
+    transform: translateX(100%);
+}
+.group__question-4 {
+    transform: translateX(-100%);
+}
+
+.group__question-active {
+    transform: none;
 }
 
 .question__img {
@@ -518,6 +590,15 @@ body {
 .groupImg__img {
     width: 12rem;
     filter: invert(100%) sepia(100%) saturate(2%) hue-rotate(267deg) brightness(102%) contrast(101%);
+}
+
+.groupImg-sub {
+    opacity: 0;
+    transition: opacity 2s;
+}
+
+.groupImg-sub-active {
+    opacity: 1;
 }
 
 .groupImg__name {
