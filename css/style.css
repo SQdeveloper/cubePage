@@ -16,7 +16,7 @@ body {
 .home {
     height: 100vh;
     width: 100%;
-    background-image: url("../images/fondo-cubo.png");
+    background-image: url("https://www.wallpaperuse.com/wallp/28-286965_m.jpg");
     background-size: 100% 100%;
     color: white;
     display: flex;
@@ -54,8 +54,19 @@ body {
 }
 
 .home__text-description {
-    width: 39rem;
+    width: 80%;
+    margin: auto;
     text-align: center;
+}
+
+.description__red {
+    color: red;
+    font-weight: bold;
+}
+
+.description__green {
+    color: #2BEE32;
+    font-weight: bold;
 }
 
 .home__groupMarcas {
@@ -82,6 +93,7 @@ body {
     font-size: 3rem;
     transform: translateX(-100%);
     transition: transform 2s;
+    margin-top: 4rem;
 }
 
 .title-active {
@@ -441,29 +453,36 @@ body {
 .datosInteresantes {
     position: relative;
     background-image: url("../images/VectorMorado.png");
+    background-size: 100% 100%;
     width: 100%;
     background-repeat: no-repeat;
-    height: 55rem;
+    height: 47.38rem;
     top: 62rem;
     text-align: center;
     color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .datosInteresantes__title {
-    margin: 7rem 0 1.5rem 0;
+    margin: 0 auto;
+    width: 90%;
     font-size: 3rem;
 }
 
 .datosInteresantes__text {
     width: 70%;
-    margin: auto;
-    margin-bottom: 4rem;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+    margin-top: 1rem;
 }
 
 .datosInteresantes__contCards {
     display: flex;
     width: 80%;
-    margin: auto;
+    margin: 0 auto;
     justify-content: center;
     flex-wrap: wrap;
     gap: 2rem;
@@ -475,6 +494,7 @@ body {
     background-color: white;
     border-radius: 15px;
     margin-bottom: 8rem;
+    margin-bottom: 0;
 }
 
 .card__img {
@@ -499,6 +519,7 @@ body {
 .preguntasFrecuentes__title {
     color: #A41CF8;
     font-size: 3rem;
+    margin-top: 7rem;
 }
 
 .group__question {
@@ -603,4 +624,148 @@ body {
 
 .groupImg__name {
     font-size: 2rem;
+}
+
+.img__up {
+    position: fixed;
+    right: 1rem;
+    bottom: 1.2rem;
+    width:3rem;
+    color: #2BEE32;
+    filter: invert(66%) sepia(81%) saturate(1052%) hue-rotate(68deg) brightness(103%) contrast(94%);
+    transition: transform .3s, opacity .5s;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.img__up:hover {
+    transform: scale(1.2);
+}
+
+@media screen and (max-width:1280px) {
+    .contCards__card {width: 18rem;height: 20rem;}
+    .card__img {width: 8rem;}
+    .card__text {font-size: .8rem;}
+    .datosInteresantes__title {font-size: 2.8rem;}
+}
+
+@media screen and (max-width:1200px) {
+    .stationCube__bubble2 {left: 2rem;}
+    .stationCube__bubble3 {left: 4rem;}
+    .stationCube__bubble4 {top: 44rem; left: 24rem;}
+    .contentPhone__phone, .contentPhone {width: 30rem;}
+    .contentPhone {right: 6rem;}
+    .contentPhone__text {font-size: 1rem;}
+    .bubble__text {z-index: 1;}
+}
+
+@media screen and (max-width:1160px) {
+    .contCards__card {width: 16rem;height: 18rem;}
+    .card__img {width: 5rem;}
+    .datosInteresantes {height: 41rem;}
+    .vector__text {font-size:3rem}
+}
+
+@media screen and (max-width:1040px) {
+    .datosInteresantes {height: 75rem;}
+    .contCards__card {width: 100%;height: 15rem;}
+    .card__img {width: 7rem;}
+}
+
+@media screen and (max-width:1000px) {
+    .stationCube__bubble1 {top: 13rem;}
+    .stationCube__bubble2 {top: 13rem;}
+    .contentPhone {top: 32rem;left: 50%;transform: translateX(-50%);}
+    .home__groupMarcas-img {width: 7rem;}
+    .home__text-title {font-size: 2.5rem;}
+    .title {font-size: 2rem;}
+    .title::before {height: 3rem;}
+    .stationCube__bubble3 {top: 48rem;}
+    .stationCube__bubble4 {left: 18rem; top:51rem}
+    .stationCube__bubble5 {right: 2rem;}
+    .contentPhone__phone {width: 27rem;}
+    .stationCube__bubble1, .stationCube__bubble3 {width: 9rem;height: 9rem;}
+    .stationCube__bubble2 {width: 15rem;height: 15rem;}
+    .stationCube__bubble4 {width: 13rem;height: 13rem;}
+    .stationCube__bubble5 {width: 11rem;height: 11rem;}
+    .groupImg__img {width: 8rem}
+    .footer {height: 24rem;}
+    .footer__groupImg {margin-top: 6rem;}
+    .tiposCubos__contCards-card {width: 12rem; height: 14rem; text-align: center}
+    .tiposCubos__card-img {width:12rem; height: 12rem}
+    .tiposCubos__card-title {font-size: 1.5rem; margin: 0}
+    .tiposCubos__card-subtitle {font-size: 1.1rem}
+    .vector__img-gan {width: 15rem;}
+    .vector__text {margin-top: 2rem}
+    .vector {height:24rem}
+    .stationCube {margin-top: 0}
+    .masVendidos__swiper {margin-top: 8rem}
+    .preguntasFrecuentes__title {font-size: 2.5rem}
+    .preguntasFrecuentes {font-size: .8rem;}
+    .datosInteresantes__title {font-size: 2.5rem}
+}
+
+@media screen and (max-width:860px) {
+    .vector__img-gan {width: 13rem; top:8rem}
+    .vector__text {margin-top: 2rem; font-size: 2.5rem}
+}
+
+@media screen and (max-width:770px) {
+    .stationCube__bubble2 {top: 10rem;}
+    .stationCube__bubble3 {top: 33rem;left: .5rem;}
+    .stationCube__bubble4 {top: 36rem;left: 10rem;}
+    .stationCube__bubble5 {top: 33rem;right: 1rem;}
+    .stationCube__bubble1, .stationCube__bubble3 {width: 6rem;height: 6rem;}
+    .stationCube__bubble2 {width: 12rem;height: 12rem;}
+    .stationCube__bubble4 {width: 10rem;height: 10rem;}
+    .stationCube__bubble5 {width: 8rem;height: 8rem;}
+    .contentPhone__phone, .contentPhone {width: 22rem; top: 24rem}
+    .contentPhone__text {font-size: .8rem;}
+    .bubble__text {font-size: .9rem;}
+    .datosInteresantes__title {font-size: 2rem;}
+    .datosInteresantes__text {font-size: .8rem}
+    .datosInteresantes {top: 42rem;}
+    .preguntasFrecuentes {top: 40rem;}
+    .footer {top: 42rem;}
+    .preguntasFrecuentes {font-size: .6rem;}
+    .question__img {top:.5rem; width:1.2rem}
+    .vector__text {font-size:2rem; width: 8rem}
+    .vector__img-gan {width:12rem}
+    .vector {height: 20rem}
+}
+
+@media screen and (max-width:660px) {
+    .home__text-title {font-size: 2rem;}
+    .home__text-description {font-size: .8rem;}
+    .home__groupMarcas-img {width: 5rem;}
+    .stationCube__bubble2 {width: 10rem;height: 10rem;}
+    .contentPhone__text {font-size: .73rem;}
+    .vector__img-gan {width: 8rem; right:5rem; top: 5rem}
+    .vector__text {font-size: 1.5rem}
+    .vector {height: 15rem}
+    .title::before {border-left: 0;}
+    .title {padding-left:1.2rem}
+}
+
+@media screen and (max-width:600px) {
+    .contentPhone__phone, .contentPhone {width: 18rem;}
+    .bubble__text {font-size: .5rem;}
+}
+
+@media screen and (max-width:440px) {
+    .preguntasFrecuentes {font-size:.8rem}
+    .question__question {width: 80%; padding-right: 1rem}
+    .question__img {top: 1rem}
+    .groupImg__img {width: 5rem}
+    .footer {font-size:1rem; height: 20rem}
+    .groupImg__name {font-size:1.5rem}
+    .tiposCubos__contCards-card {width:8rem; height: 10rem}
+    .tiposCubos__card-img {width:7rem; height:7rem}
+    .tiposCubos__card__content {top:-3rem}
+    .card__img {width: 5rem}
+    .vector__text {font-size: 1.2rem; margin-left: 2rem; margin-top: 1rem}
+    .vector {height: 10rem}
+    .vector__img-gan {top: 3rem}
+    .masVendidos__swiper {margin: 3rem 0 0 0}
+    .preguntasFrecuentes__title {font-size: 2.2rem}
 }
